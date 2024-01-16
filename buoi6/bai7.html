@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=[1,5,6,3,2,1,1,5,6,7];
+        var n=+prompt("Nhập vào 1 số bất kỳ")
+         var sum=0;
+        var check=true;
+         var b=[];
+        for(let i=0;i<a.length;i++){
+            b=[];
+            sum=0;
+            for(let j=i;j<a.length;j++){
+                b.push(a[j]);
+                sum+=a[j];
+                if(sum==n){
+                    check=false;
+                    break;
+                }
+            }
+            if(!check){
+                break;
+            }
+        }
+        if(check){
+            console.log("Không có mảng con thỏa mãn ")
+        } else{
+        for(let i=0;i<b.length;i++){
+            console.log(b[i])
+        }
+    }
+    </script>
+</body>
+</html>

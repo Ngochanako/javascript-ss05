@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = [1, 2, 3, 4, 5, 2, 4, 7, 4, 8];
+            let n = a.length;
+            let cnt = 0;
+            let check=false;
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < i; j++) {
+                    if (a[j] == a[i]) {
+                        check=true;
+                        break;
+                    }
+                }  
+            if (!check) {
+                    for (let j = i + 1; j < n; j++) {
+                        if (a[j] == a[i]) {
+                            console.log(a[j]);
+                            break;
+                        }
+                    }
+
+                }
+
+            }
+    </script>
+</body>
+</html>
